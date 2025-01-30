@@ -1,58 +1,201 @@
-/* AdminPanel.css */
+/* General Styles */
 .admin-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.admin-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Forms */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.admin-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.admin-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.admin-button, .cancel-btn {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.admin-button:hover {
+  background: #0056b3;
+}
+
+.cancel-btn {
+  background: #dc3545;
+}
+
+.cancel-btn:hover {
+  background: #a71d2a;
+}
+
+/* Search Section */
+.search-input {
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Table */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-table th, .admin-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.admin-table th {
+  background: #007bff;
+  color: white;
+}
+
+/* Buttons */
+.edit-btn, .delete-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.edit-btn {
+  background: #28a745;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #218838;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #a71d2a;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .admin-container {
+    width: 90%;
+    padding: 15px;
   }
-  
+
   .admin-title {
-    text-align: center;
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-size: 20px;
   }
-  
-  .form-group {
-    margin-bottom: 15px;
+
+  .admin-form {
+    gap: 8px;
   }
-  
-  .form-group label {
-    display: block;
+
+  .admin-input {
     font-size: 14px;
-    font-weight: 500;
-    color: #333;
+    padding: 8px;
   }
-  
-  .form-group input {
+
+  .admin-button, .cancel-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .admin-table th, .admin-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .edit-btn, .delete-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .admin-container {
     width: 100%;
     padding: 10px;
-    margin-top: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 14px;
   }
-  
-  .form-group input:focus {
-    border-color: #4C9BFF;
-    outline: none;
+
+  .admin-title {
+    font-size: 18px;
   }
-  
-  .submit-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #4C9BFF;
-    color: white;
-    font-weight: 600;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
+
+  .admin-form {
+    gap: 5px;
   }
-  
-  .submit-button:hover {
-    background-color: #3578e5;
+
+  .admin-input {
+    font-size: 12px;
+    padding: 6px;
   }
-  
+
+  .admin-button, .cancel-btn {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .admin-table th, .admin-table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .edit-btn, .delete-btn {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+}
